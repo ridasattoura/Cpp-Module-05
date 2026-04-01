@@ -15,7 +15,7 @@ static void header(const std::string &title)
 
 int main()
 {
-	header("Intern creates known forms");
+	std::cout << "== Intern creates known forms ==" << std::endl;
 	{
 		Intern someRandomIntern;
 		AForm *s = someRandomIntern.makeForm("shrubbery creation", "home");
@@ -45,14 +45,14 @@ int main()
 		delete p;
 	}
 
-	header("Intern unknown form name");
+	std::cout << "== Intern unknown form name ==" << std::endl;
 	{
 		Intern intern;
 		AForm *unknown = intern.makeForm("form 28B", "target");
 		delete unknown;
 	}
 
-	header("Execute should fail when unsigned");
+	std::cout << "== Execute should fail when unsigned ==" << std::endl;
 	{
 		Intern intern;
 		Bureaucrat exec("Exec", 1);
@@ -62,7 +62,7 @@ int main()
 		delete rrf;
 	}
 
-	header("Execute should fail with too-low grade");
+	std::cout << "== Execute should fail with too-low grade ==" << std::endl;
 	{
 		Intern intern;
 		Bureaucrat signer("Signer", 1);

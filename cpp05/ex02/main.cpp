@@ -6,21 +6,17 @@
 
 #include <iostream>
 
-static void header(const std::string &title)
-{
-	std::cout << "\n== " << title << " ==\n";
-}
 
 int main()
 {
-	header("Unsigned execute should fail");
+	std::cout << "== Unsigned execute should fail ==" << std::endl;
 	{
 		Bureaucrat exec("Exec", 1);
 		RobotomyRequestForm f("Marvin");
 		exec.executeForm(f);
 	}
 
-	header("Sign but execute with too-low grade should fail");
+	std::cout << "== Sign but execute with too-low grade should fail ==" << std::endl;
 	{
 		Bureaucrat signer("Signer", 1);
 		Bureaucrat lowExec("LowExec", 150);
@@ -30,7 +26,7 @@ int main()
 		lowExec.executeForm(f);
 	}
 
-	header("Shrubbery creation success (creates file)");
+	std::cout << "== Shrubbery creation success (creates file) ==" << std::endl;
 	{
 		Bureaucrat b("Gardener", 1);
 		ShrubberyCreationForm f("home");
@@ -39,7 +35,7 @@ int main()
 		std::cout << "Check for file: home_shrubbery" << std::endl;
 	}
 
-	header("Robotomy: 50% success");
+	std::cout << "== Robotomy: 50% success ==" << std::endl;
 	{
 		Bureaucrat b("Rob", 1);
 		RobotomyRequestForm f("Bender");
@@ -48,7 +44,7 @@ int main()
 			b.executeForm(f);
 	}
 
-	header("Presidential pardon success");
+	std::cout << "== Presidential pardon success ==" << std::endl;
 	{
 		Bureaucrat b("Prez", 1);
 		PresidentialPardonForm f("Arthur");

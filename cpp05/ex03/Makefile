@@ -22,10 +22,10 @@ $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) home_shrubbery
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) home_shrubbery
 
 re: fclean all
 
