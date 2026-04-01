@@ -8,10 +8,6 @@
 
 #include <iostream>
 
-static void header(const std::string &title)
-{
-	std::cout << "\n== " << title << " ==\n";
-}
 
 int main()
 {

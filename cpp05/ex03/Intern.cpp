@@ -67,6 +67,6 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &target) 
         }
     }
 
-    std::cout << "Inten couldn't create '" << formName << "' beacause it doesn't exist." << std::endl;
+    std::cout << "Intern couldn't create '" << formName << "' because it doesn't exist." << std::endl;
     return NULL;
 }
